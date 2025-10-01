@@ -1,80 +1,68 @@
-# MediCure-AI: Advanced Medical Image Analysis System
-![Python](https://img.shields.io/badge/python-%2338BDF8.svg?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-![Werkzeug](https://img.shields.io/badge/werkzeug-%23F05033.svg?style=for-the-badge&logo=werkzeug&logoColor=white)
-![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
-![YOLO](https://img.shields.io/badge/YOLO-%23FF6F00.svg?style=for-the-badge&logo=yolo&logoColor=white)
-![Google AI](https://img.shields.io/badge/Google%20AI-%234285F4.svg?style=for-the-badge&logo=google&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/machine%20learning-%2300BFFF.svg?style=for-the-badge&logo=machine-learning&logoColor=white)
-![Deep Learning](https://img.shields.io/badge/deep%20learning-%2333CCFF.svg?style=for-the-badge&logo=deep-learning&logoColor=white)
-![ReportLab](https://img.shields.io/badge/reportlab-%23FF6F00.svg?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)
-![Dotenv](https://img.shields.io/badge/dotenv-%230077B6.svg?style=for-the-badge&logo=dotenv&logoColor=white)
+<div align="center">
+
+# 🏥 MedVisionAI
+### Advanced Medical Image Analysis System
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-2.3.3-green?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
+[![YOLO](https://img.shields.io/badge/YOLO-8.0.200-orange?style=for-the-badge&logo=yolo&logoColor=white)](https://ultralytics.com)
+[![Google AI](https://img.shields.io/badge/Google%20Gemini-AI-red?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+**AI-Powered Medical Diagnostics for the Modern Healthcare**
+
+[🚀 Live Demo](#) • [📖 Documentation](#) • [🐛 Report Bug](#) • [✨ Request Feature](#)
+
+</div>
 
 
-This project implements a cutting-edge AI-powered medical image analysis system that leverages multiple fine tuned  YOLO Nano segmentation model and Google's Gemini AI to detect various medical conditions from radiological images. The system provides real-time analysis, detailed reports, and professional medical insights for liver, brain, eye, kidney, and lung conditions.
+## 🌟 Overview
 
-![127 0 0 1_5000_](https://github.com/user-attachments/assets/7e77f204-8bd5-4109-b3cd-09f59a0416f8)
+MedVisionAI revolutionizes medical imaging with AI-powered diagnostic precision. Our system combines state-of-the-art YOLO segmentation models with Google's Gemini AI to provide comprehensive analysis of medical scans including CT, MRI, X-ray, and ultrasound images.
+
+### 🎯 Key Features
+
+- **🔬 Multi-Modal Analysis**: Support for liver, brain MRI, eye, kidney, and lung imaging
+- **⚡ Real-time Detection**: Instant analysis with confidence scoring and visualization
+- **🤖 AI-Powered Insights**: Integration with Google Gemini AI for professional interpretations
+- **📄 Automated Reports**: PDF reports with findings, confidence scores, and recommendations
+- **🎨 Advanced Visualization**: Pseudo-coloring and bounding box visualization
+- **🌐 Web Interface**: User-friendly Flask web application
+- **📊 Batch Processing**: Support for multiple model analysis on single images
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7e77f204-8bd5-4109-b3cd-09f59a0416f8" alt="MedVisionAI Interface" width="800"/>
+</div>
 
 
 
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Supported Medical Conditions](#supported-medical-conditions)
-- [System Architecture](#system-architecture)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Technologies Used](#technologies-used)
-- [Code Structure](#code-structure)
-- [Contributing](#contributing)
-- [License](#license)
+## 📋 Table of Contents
 
-## Introduction
+- [🌟 Overview](#-overview)
+- [🏥 Supported Medical Conditions](#-supported-medical-conditions)
+- [🏗️ System Architecture](#️-system-architecture)
+- [⚙️ Installation](#️-installation)
+- [🔧 Configuration](#-configuration)
+- [🚀 Usage](#-usage)
+- [📡 API Endpoints](#-api-endpoints)
+- [🛠️ Technologies Used](#️-technologies-used)
+- [📁 Code Structure](#-code-structure)
+- [🌐 Deployment](#-deployment)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
-MediCure-AI revolutionizes medical imaging with AI-powered diagnostic precision. Our system combines state-of-the-art fine tuned  YOLO Nano segmentation model with Google's Gemini AI to provide comprehensive analysis of medical scans including CT, MRI, X-ray, and ultrasound images. The platform is designed to assist healthcare professionals in making faster, more accurate diagnoses while generating detailed PDF reports for clinical documentation.
+## 🏥 Supported Medical Conditions
 
-## Features
+| **Organ** | **Conditions Detected** | **Applications** |
+|-----------|------------------------|------------------|
+| 🫀 **Liver** | Liver tumors, normal tissue | Hepatocellular carcinoma detection, liver health assessment |
+| 🧠 **Brain MRI** | Brain tumors, anatomical structures | Neurological disorder diagnosis, tumor detection |
+| 👁️ **Eye** | Cataract, Diabetic Retinopathy, Glaucoma, Normal | Ophthalmological screening, preventive care |
+| 🫘 **Kidney** | Kidney stones | Urological assessment, stone detection |
+| 🫁 **Lung** | Lung tumors/cancer | Pulmonary oncology, early cancer detection |
 
-- **Multi-Modal Medical Analysis**: Support for liver, brain MRI, eye, kidney, and lung imaging
-- **Real-time Detection**: Instant analysis with confidence scoring and bounding box visualization
-- **AI-Powered Insights**: Integration with Google Gemini AI for professional medical interpretations
-- **Automated Report Generation**: PDF reports with findings, confidence scores, and treatment recommendations
-- **Pseudo-Coloring**: Advanced visualization techniques for better anomaly identification
-- **Web-Based Interface**: User-friendly Flask web application
-- **Batch Processing**: Support for multiple model analysis on single images
-- **Secure File Handling**: Robust file upload and processing with validation
-
-## Supported Medical Conditions
-
-### 🫀 Liver Analysis
-- **Conditions Detected**: Liver tumors, normal liver tissue
-- **Applications**: Hepatocellular carcinoma detection, liver health assessment
-
-### 🧠 Brain MRI Analysis
-- **Conditions Detected**: Brain tumors, anatomical structures
-- **Applications**: Neurological disorder diagnosis, tumor detection
-
-### 👁️ Eye Examination
-- **Conditions Detected**: 
-  - Cataract
-  - Diabetic Retinopathy
-  - Glaucoma
-  - Normal eye conditions
-- **Applications**: Ophthalmological screening, preventive care
-
-### 🫘 Kidney Analysis
-- **Conditions Detected**: Kidney stones
-- **Applications**: Urological assessment, stone detection
-
-### 🫁 Lung Analysis
-- **Conditions Detected**: Lung tumors/cancer
-- **Applications**: Pulmonary oncology, early cancer detection
-
-## System Architecture
+## 🏗️ System Architecture
 
 ### Workflow Diagram
 ```mermaid
@@ -110,52 +98,94 @@ graph TD
 - **AI Analysis**: Google Gemini integration for medical insights
 - **Report Generation**: Automated PDF creation with comprehensive findings
 
-## Installation
+## ⚙️ Installation
 
-### Prerequisites
-- Python 3.8 or later
-- pip (Python package installer)
-- CUDA-compatible GPU (recommended for faster inference)
+### 📋 Prerequisites
 
-### Step 1: Clone the Repository
+- **Python** 3.8 or later
+- **pip** (Python package installer)
+- **CUDA-compatible GPU** (recommended for faster inference)
+- **Git** (for cloning the repository)
+
+### 🚀 Quick Start
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/kknani24/medicure-ai-.git
+cd MedVisionAI-main
+
+# 2. Create virtual environment
+python -m venv venv
+
+# 3. Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# 4. Install dependencies
+pip install -r requirements.txt
+
+# 5. Run the application
+python application.py
+```
+
+### 📦 Manual Installation
+
+<details>
+<summary>Click to expand detailed installation steps</summary>
+
+#### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/kknani24/medicure-ai-.git
 cd MedVisionAI-main
 ```
 
-### Step 2: Create Virtual Environment
+#### Step 2: Create Virtual Environment
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-### Step 3: Install Required Packages
+#### Step 3: Install Required Packages
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Install Additional Dependencies
+#### Step 4: Verify Installation
 ```bash
-# All dependencies are included in requirements.txt
-# No additional installation needed
+python -c "import application; print('✅ Installation successful!')"
 ```
 
-## Configuration
+</details>
 
-### Step 1: Environment Setup
+## 🔧 Configuration
+
+### 🔑 Environment Setup
+
 Create a `.env` file in the project root:
+
 ```env
+# Google Gemini API Key
+# Get your API key from: https://makersuite.google.com/app/apikey
 GEMINI_API_KEY=your_google_gemini_api_key_here
+
+# Flask Configuration
+FLASK_ENV=development
+FLASK_DEBUG=True
 ```
 
-### Step 2: Model Files
-Ensure all YOLO model files are present:
+### 📁 Model Files
+
+Ensure all YOLO model files are present in the `models/` directory:
+
 ```
-├── liver_tumour.pt
-├── brain_mri.pt
-├── eye.pt
-├── kidney.pt
-└── lung cancer.pt
+models/
+├── liver_tumour.pt      # Liver tumor detection
+├── brain_mri.pt         # Brain MRI analysis
+├── eye.pt               # Eye condition detection
+├── kidney.pt            # Kidney stone detection
+└── lung cancer.pt       # Lung cancer detection
 ```
 
 ### Step 3: Directory Structure
@@ -178,21 +208,28 @@ MedVisionAI-main/
 └── README.md
 ```
 
-## Usage
+## 🚀 Usage
 
-### Step 1: Start the Application
-```bash
-python application.py
-```
+### 🖥️ Web Interface
 
-### Step 2: Access the Web Interface
-Open your browser and navigate to `http://localhost:5000`
+1. **Start the Application**
+   ```bash
+   python application.py
+   ```
 
-### Step 3: Upload and Analyze
-1. Select a medical image (PNG, JPG, JPEG formats supported)
-2. Choose a specific model or leave blank for multi-model analysis
-3. Click "Analyze Image" to process
-4. View results, AI insights, and download the PDF report
+2. **Access the Interface**
+   - Open your browser and navigate to `http://localhost:5000`
+   - The application will be running in debug mode
+
+3. **Upload and Analyze**
+   - Select a medical image (PNG, JPG, JPEG formats supported)
+   - Choose a specific model or leave blank for multi-model analysis
+   - Click "Analyze Image" to process
+   - View results, AI insights, and download the PDF report
+
+### 🎮 Simulation Mode
+
+Access the surgical simulation interface at `http://localhost:5000/simulate` for advanced medical procedure training.
 
 ### Command Line Usage
 For programmatic access, you can also use the API endpoints directly:
@@ -207,7 +244,7 @@ response = requests.post('http://localhost:5000/detect', files=files, data=data)
 result = response.json()
 ```
 
-## API Endpoints
+## 📡 API Endpoints
 
 ### POST /detect
 Analyzes uploaded medical images and returns detection results.
@@ -236,12 +273,27 @@ Analyzes uploaded medical images and returns detection results.
 }
 ```
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-### YOLO (You Only Look Once)
-<img src="https://cdn.prod.website-files.com/680a070c3b99253410dd3df5/680a070c3b99253410dd4791_67ed5670d7ecbda0527fe8b3_66f680814693dd5c3b60dfcb_YOLO11_Thumbnail.png" width="400"/>
+### 🧠 Core Technologies
 
-YOLO is a state-of-the-art real-time object detection system. In this project, we use specialized YOLO models trained on medical datasets for accurate detection of various pathological conditions. The models provide fast inference with high accuracy, making them ideal for clinical applications.
+| **Technology** | **Version** | **Purpose** |
+|----------------|-------------|-------------|
+| **Python** | 3.8+ | Backend development |
+| **Flask** | 2.3.3 | Web framework |
+| **YOLO** | 8.0.200 | Object detection models |
+| **PyTorch** | 2.0.1 | Deep learning framework |
+| **OpenCV** | 4.8.1 | Image processing |
+| **Google Gemini** | Latest | AI medical insights |
+| **ReportLab** | 4.0.4 | PDF report generation |
+
+### 🔬 AI/ML Stack
+
+- **YOLO (You Only Look Once)**: State-of-the-art real-time object detection
+- **PyTorch**: Deep learning framework for model inference
+- **Google Gemini AI**: Advanced language model for medical analysis
+- **OpenCV**: Computer vision and image processing
+- **NumPy**: Numerical computing and array operations
 
 ### Google Gemini AI
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/300px-Google_Gemini_logo.svg.png" alt="Google Gemini" width="400"/>
@@ -260,7 +312,7 @@ OpenCV handles all computer vision operations including image loading, processin
 
 
 
-## Code Structure
+## 📁 Code Structure
 
 ```
 MedVisionAI-main/
@@ -284,7 +336,38 @@ MedVisionAI-main/
 - **`generate_response_with_image()`**: Interfaces with Gemini AI
 - **`create_pdf_report()`**: Generates comprehensive PDF reports
 
-## Contributing
+## 🌐 Deployment
+
+### 🚀 Quick Deployment Options
+
+| **Platform** | **Free Tier** | **Custom Domain** | **SSL** | **Difficulty** |
+|--------------|---------------|-------------------|---------|----------------|
+| **Render** | ✅ | ✅ | ✅ | Easy |
+| **Railway** | ✅ | ✅ | ✅ | Easy |
+| **Heroku** | ❌ | ✅ | ✅ | Medium |
+| **DigitalOcean** | ❌ | ✅ | ✅ | Medium |
+
+### 📋 Deployment Checklist
+
+- [ ] Update `.env` with production API keys
+- [ ] Test application locally
+- [ ] Ensure all dependencies are in `requirements.txt`
+- [ ] Configure environment variables on hosting platform
+- [ ] Set up custom domain and SSL
+- [ ] Test deployed application
+
+### 🔧 Environment Variables for Production
+
+```env
+GEMINI_API_KEY=your_production_api_key
+FLASK_ENV=production
+FLASK_DEBUG=False
+PORT=5000
+```
+
+For detailed deployment instructions, see [deploy.md](deploy.md).
+
+## 🤝 Contributing
 
 We welcome contributions to improve MediCure-AI! Here's how you can contribute:
 
@@ -323,11 +406,23 @@ git push origin feature/amazing-feature
 - **Documentation**: Improve documentation and add tutorials
 - **Testing**: Add comprehensive test coverage
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
+
+<div align="center">
+
+### 🌟 Star this repository if you found it helpful!
+
+**Made with ❤️ for the medical community**
+
+[![GitHub stars](https://img.shields.io/github/stars/kknani24/medicure-ai-?style=social)](https://github.com/kknani24/medicure-ai-)
+[![GitHub forks](https://img.shields.io/github/forks/kknani24/medicure-ai-?style=social)](https://github.com/kknani24/medicure-ai-/fork)
+[![GitHub watchers](https://img.shields.io/github/watchers/kknani24/medicure-ai-?style=social)](https://github.com/kknani24/medicure-ai-)
+
+</div>
 
 ## Disclaimer
 
@@ -338,6 +433,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 **© 2025 MediCure-AI. All rights reserved.**
 
 For questions, support, or collaboration opportunities, please open an issue or contact the development team.
-#   M e d V i s i o n A I 
- 
- 
+#
